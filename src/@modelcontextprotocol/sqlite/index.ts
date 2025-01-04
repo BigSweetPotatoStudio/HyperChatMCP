@@ -6,7 +6,7 @@ import { Package, MCP } from "../../mcp";
 const config = z.object({
   dbPath: z.string({
     required_error: "Path is required",
-    description: "allow path",
+    description: "sqlite db path",
   }),
 });
 
