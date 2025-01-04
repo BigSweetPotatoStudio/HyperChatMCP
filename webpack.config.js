@@ -5,7 +5,7 @@ module.exports = (env, argv) => {
   return {
     target: "web",
     entry: {
-      main: "./src/register",
+      main: "./src/main",
     },
     plugins: [
       new webpack.EnvironmentPlugin({
