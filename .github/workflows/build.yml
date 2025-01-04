@@ -10,12 +10,8 @@ on:
 jobs:
   release:
     name: build and release electron app
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows-latest, macos-latest]
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check out git repository
