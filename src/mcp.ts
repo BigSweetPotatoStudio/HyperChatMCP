@@ -6,6 +6,7 @@ export type Package = {
   github?: string;
   description: string;
   keywords: string[];
+  markdown?: string;
   resolve: (config: any) => {
     command: string;
     args: string[];
