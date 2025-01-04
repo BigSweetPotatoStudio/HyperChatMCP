@@ -1,0 +1,55 @@
+name: HyperChat
+
+# on: [push, pull_request]
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: build and release electron app
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v3.0.0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3.0.0
+        with:
+          node-version: "20"
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install -g
+        run: npm install -g cross-env zx
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Install Dependencies
+        run: npm run prod
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # 始终创建 release
+          draft: false
+          prerelease: false
+          # 如果已存在同名 release，则替换
+          fail_on_unmatched_files: false
+          # 自动生成版本号
+          tag_name: v${{ github.run_number }}
+          files: |
+            dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
