@@ -1,5 +1,5 @@
 
-import "./hyper-mcp-terminal"
+// import "./hyper-mcp-terminal"
 import "./hyper-mcp-shell"
 import "./@modelcontextprotocol/server-filesystem";
 import "./@modelcontextprotocol/sqlite";
