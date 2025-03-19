@@ -4,17 +4,16 @@ import { zodToJsonSchema } from "zod-to-json-schema";
 import { Package, MCP } from "../mcp";
 
 const config = z.object({
-  SEARCH_ENGINE: z.nullable(z.enum(["google", "bing"], {
-    description: "use search engine",
-  }).default("google"), {
-    description: "use search engine nullable",
-  }),
-  isUseLoacl: z
-    .boolean({
-      description: "use local browser",
+  SEARCH_ENGINE: z
+    .enum(["google", "bing"], {
+      description: "use search engine",
     })
-    .default(true),
-
+    .default("google"),
+  isUseLoacl: z
+    .enum(["true", "false"], {
+      description: "use search engine",
+    })
+    .default("true"),
   Browser_HOST: z
     .string({
       description: "The host of the browser",
