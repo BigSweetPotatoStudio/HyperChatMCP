@@ -14,16 +14,11 @@ const config = z.object({
       description: "use search engine",
     })
     .default("true"),
-  Browser_HOST: z
+  browserURL: z
     .string({
       description: "The host of the browser",
     })
-    .default("127.0.0.1"),
-  Browser_PORT: z
-    .number({
-      description: "The debuuger port of the browser",
-    })
-    .default(9222),
+    .default("http://localhost:9222"),
 });
 
 type Config = z.infer<typeof config>;
@@ -41,8 +36,7 @@ const p: Package = {
       env: {
         Hyper_SEARCH_ENGINE: config.SEARCH_ENGINE,
         Hyper_isUseLoacl: config.isUseLoacl,
-        Hyper_Browser_HOST: config.Browser_HOST,
-        Hyper_Browser_PORT: config.Browser_PORT,
+        Hyper_browserURL: config.browserURL,
       } as any,
     };
   },
