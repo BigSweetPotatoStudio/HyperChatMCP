@@ -27,8 +27,8 @@ const p: Package = {
   type: "npx",
   name: "hyper-mcp-browser",
   github: "https://github.com/BigSweetPotatoStudio/hyper-mcp-browser",
-  description: "terminal execute-command",
-  keywords: ["terminal", "shell", "execute-command"],
+  description: "use chrome browser, summarize-page and use search engine",
+  keywords: ["browser","open-url"],
   resolve: (config: Config) => {
     return {
       command: "npx",
