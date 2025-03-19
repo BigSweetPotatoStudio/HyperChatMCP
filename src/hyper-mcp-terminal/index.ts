@@ -35,8 +35,8 @@ const p: Package = {
       command: "npx",
       args: ["-y", "hyper-mcp-terminal"],
       env: {
-        Terminal_End_CheckCount: config.Timeout,
-        Terminal_Output_MaxToken: config.Timeout,
+        Terminal_End_CheckCount: config.End_CheckCount,
+        Terminal_Output_MaxToken: config.Output_MaxToken,
         Terminal_Timeout: config.Timeout,
       } as any,
     };
