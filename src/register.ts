@@ -1,6 +1,6 @@
 
-// import "./hyper-mcp-terminal"
 import "./hyper-mcp-shell";
+import "./hyper-mcp-terminal"
 import "./hyper-mcp-browser";
 import "./@modelcontextprotocol/server-filesystem";
 import "./@modelcontextprotocol/sqlite";

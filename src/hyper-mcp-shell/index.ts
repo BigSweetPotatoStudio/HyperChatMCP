@@ -11,8 +11,8 @@ const p: Package = {
   type: "npx",
   name: "hyper-mcp-shell",
   github: "https://github.com/BigSweetPotatoStudio/hyper-mcp-shell",
-  description: "shell execute-command",
-  keywords: ["shell", "execute-command"],
+  description: "shell execute-local-command",
+  keywords: ["shell", "execute-local-command"],
   resolve: (config: Config) => {
     return {
       command: "npx",

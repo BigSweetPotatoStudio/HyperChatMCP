@@ -22,8 +22,8 @@ const p: Package = {
   type: "npx",
   name: "hyper-mcp-terminal",
   github: "https://github.com/BigSweetPotatoStudio/hyper-mcp-terminal",
-  description: "terminal execute-command",
-  keywords: ["terminal", "shell", "execute-command"],
+  description: "terminal is hyper-mcp-shell(advanced)，ssh execute-command",
+  keywords: ["terminal", "linux", "execute-command", "ssh"],
   resolve: (config: Config) => {
     return {
       command: "npx",
