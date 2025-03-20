@@ -6,19 +6,24 @@ import { Package, MCP } from "../mcp";
 const config = z.object({
   SEARCH_ENGINE: z
     .enum(["google", "bing"], {
-      description: "use search engine",
+      description: "search engine",
     })
     .default("google"),
   isUseLoacl: z
     .enum(["true", "false"], {
-      description: "use search engine",
+      description: "Whether to use a local browser",
     })
     .default("true"),
   browserURL: z
     .string({
-      description: "The host of the browser",
+      description: "Connect to the browser's remote debugging port",
     })
     .default("http://localhost:9222"),
+  startingUrl: z
+    .string({
+      description: "starting Page Url",
+    })
+    .default("https://github.com/BigSweetPotatoStudio/HyperChat"),
 });
 
 type Config = z.infer<typeof config>;
@@ -28,7 +33,7 @@ const p: Package = {
   name: "hyper-mcp-browser",
   github: "https://github.com/BigSweetPotatoStudio/hyper-mcp-browser",
   description: "use chrome browser, summarize-page and use search engine",
-  keywords: ["browser","open-url"],
+  keywords: ["browser", "open-url"],
   resolve: (config: Config) => {
     return {
       command: "npx",
