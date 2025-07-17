@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/bigsweetpotatostudio-hyperchatmcp-badge.png)](https://mseep.ai/app/bigsweetpotatostudio-hyperchatmcp)
+
 ## 这个是HyperChat的官方维护的列表，更加人性化，通过jsonSchema生成表单转成MCP配置
 
 如下是一个简单的例子，欢迎提交代码，合并后会自动发布HyperChat MCP Extension列表
