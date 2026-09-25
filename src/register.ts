@@ -6,3 +6,4 @@ import "./@modelcontextprotocol/sqlite";
 import "./mcp-obsidian/index";
 import "./@modelcontextprotocol/server-brave-search/index";
 import "./@modelcontextprotocol/server-github";
+import "./springbrand/index";
